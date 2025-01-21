@@ -129,4 +129,44 @@ data.frame(이름, (mid[, -1] + final[, -1]) / 2)
 #cars 데이터셋의 자료구조는?
 class(cars)
 
-#casr 데이터셋의 관측값과 컬럼의 개수는?
+#cars 데이터셋의 관측값과 컬럼의 개수는?
+dim(cars)
+
+#cars 데이터셋의 앞쪽 일부분의 내용은?
+head(cars, 10)
+
+#cars 데이터셋의 요약정보는?
+str(cars)
+
+#cars 데이터셋의 컬럼별 평균은?
+colMeans(cars)
+
+#가장 긴 제동거리(dist)는?
+max(cars$dist)
+
+#제동거리가 가장 길 때의 속력(speed)과 제동거리(dist)는?
+subset(cars, dist == max(cars$dist))
+
+#(12)
+#InsectSprays 데이터셋의 자료구조가 매트릭스인지 확인
+str(InsectSprays)
+levels(InsectSprays$spray)
+
+#InsectSprays 데이터셋의 요약정보는?
+is.matrix(InsectSprays)
+
+#InsectSprays 데이터셋의 뒤쪽 10개 내용은?
+tail(InsectSprays, 10)
+
+#실험에 사용한 살충제(spray)의 종류는?
+levels(InsectSprays$spray)
+
+#살충제 종류별 데이터의 빈도는?
+table(InsectSprays$spray)
+
+#살충제 E의 자료만 추출하여 InsectSprays.e에 저장
+InsectSprays.e <- subset(InsectSprays, spray == 'E')
+InsectSprays.e
+
+#살충제 E가 박멸한 해충수(count)의 평균은?
+mean(InsectSprays.e$count)

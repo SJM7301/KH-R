@@ -1,0 +1,7 @@
+score <- c(76, 84, 69, 50, 95, 60, 82, 71, 88, 84)
+which(score == 69)
+which(score>=85)
+max(score)
+which.max(score)
+min(score)
+which.min(score)

@@ -1,0 +1,11 @@
+setwd('C:\\Temp')
+print('Begin work')
+a <- 10; b <- 20
+sink('result.txt', append = T)
+cat('a + b = ', a + b, '\n')
+sink()
+cat('hello world \n')
+sink('result.txt', append = T)
+cat('a * a = ', a * a, '\n')
+sink()
+print('End work')
