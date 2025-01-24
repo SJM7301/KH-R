@@ -1,0 +1,5 @@
+z <- c(1, 2, 3, NA, 5, NA, 8)
+sum(z)
+is.na(z)
+sum(is.na(z))
+sum(z, na.rm = T)
